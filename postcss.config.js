@@ -1,16 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
-// Extend TailwindCSS Configuration
-const tailwindConfig = {
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans]
-      }
-    }
-  },
-  plugins: [ require('@tailwindcss/ui') ]
-};
+const tailwindConfig = require('tailwind.config.js');
 
 module.exports = {
   plugins: [
