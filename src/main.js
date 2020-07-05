@@ -1,10 +1,14 @@
 import { createApp } from 'vue';
+import { router } from './router';
 import { store } from './store';
 
 import App from './App.vue';
 import 'tailwindcss/tailwind.css';
 
 const app = createApp(App);
+
+// Router
+app.use(router);
 
 // Vuex Store
 app.use(store);
@@ -17,4 +21,4 @@ app.component('icon-chat', chat);
 app.component('icon-code', code);
 app.component('icon-menu', menu);
 
-app.mount('#app');
+router.isReady().then(() => app.mount('#app'))

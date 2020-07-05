@@ -2,7 +2,6 @@
   <div class="flex flex-col md:flex-row min-h-screen md:min-h-0">
     <!-- Header/Navigation -->
     <HeaderNavigation />
-
     <!-- Small Screen Header Border Line -->
     <div class="md:hidden w-1/2 mx-auto pb-6 border-cool-gray-700 border-t"></div>
 
@@ -13,9 +12,7 @@
 
       <!-- Main Content -->
       <main class="transition duration-500 sm:opacity-100" :class="isMobileNavOpen ? 'opacity-0' : 'opacity-100'">
-        <div class="min-h-56 text-gray-300 font-medium bg-cool-gray-800 rounded shadow-2xl px-4 py-2">
-          <p>Test</p>
-        </div>
+        <router-view></router-view>
       </main>
     </div>
   </div>
