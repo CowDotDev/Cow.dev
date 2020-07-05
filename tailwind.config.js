@@ -2,6 +2,10 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 // Extend TailwindCSS Configuration
 module.exports = {
+  purge: [
+    './*.html',
+    './src/**/*.vue',
+  ],
   theme: {
     extend: {
       container: {
